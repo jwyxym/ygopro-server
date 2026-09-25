@@ -1,6 +1,6 @@
 [package]
 name = "ygopro-server"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 license = "MIT"
 authors = ["jwyxym <jwyxym@126.com>"]
@@ -11,7 +11,7 @@ repository = "https://github.com/jwyxym/ygopro-server"
 [dependencies]
 ygopro = { version = "0.1.7", default-features = false, features = ["koishi", "forge"] }
 ygopro-data = { version = "0.1.3", default-features = false }
-ygopro-core-wrapper = { version = "0.1.3", default-features = false, features = ["koishi"] }
+ygopro-core-wrapper = { version = "0.1.5+3209cd866a", default-features = false, features = ["koishi"] }
 ygopro-handler = "0.1.3"
 tokio = "1"
 parking_lot = "0.12"
