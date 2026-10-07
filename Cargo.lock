@@ -1510,7 +1510,7 @@ dependencies = [
 
 [[package]]
 name = "ygopro-server"
-version = "0.1.2"
+version = "0.1.3+3209cd866a"
 dependencies = [
  "parking_lot",
  "tokio",

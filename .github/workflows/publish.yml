@@ -3,7 +3,7 @@ name: Publish to crates.io
 on:
   push:
     tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
+      - '[0-9]+.[0-9]+.[0-9]+*'
 
 permissions:
   contents: read
@@ -33,7 +33,7 @@ jobs:
           tag = os.environ["RELEASE_TAG"]
           with open("Cargo.toml", "rb") as manifest:
               version = tomllib.load(manifest)["package"]["version"]
-          if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", tag) or tag != version:
+          if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?", tag) or tag != version:
               raise SystemExit(f"Release tag {tag!r} must match package version {version!r}")
           PY
 
